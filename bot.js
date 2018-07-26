@@ -362,7 +362,7 @@ client.on("guildMemberAdd", (member) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
- channel.send(` - Welcome ${member} To Wonder \n\ - Invited By : ${Invite.inviter} `) ;         
+ channel.send(`- Invited By : ${Invite.inviter} `) ;         
  }
             dat[Inv] = Invite.uses;
        
