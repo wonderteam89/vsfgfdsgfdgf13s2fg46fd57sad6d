@@ -280,6 +280,29 @@ client.on('roleCreate', role => {
 
 //======================================[ WelCome ]======================================
 
+
+client.on('guildMemberAdd', member => {
+
+    const channel = member.guild.channels.find('name', 'ask');
+  
+    const millis = new Date().getTime() - member.user.createdAt.getTime();
+    const now = new Date();
+    const createdAt = millis / 1000 / 60 / 60 / 24;
+
+
+
+
+  
+    const embed = new Discord.RichEmbed()
+    
+    .setColor("#1f0707")
+    .setDescription(`**تاريخ دخولك للدسكورد منذ ${createdAt.toFixed(0)} يوم**`)
+    .setAuthor(member.user.tag, member.user.avatarURL);
+    channel.sendEmbed(embed);
+
+  
+});
+
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) });
