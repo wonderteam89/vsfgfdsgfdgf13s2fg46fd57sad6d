@@ -423,10 +423,10 @@ const w = ['Wonder.png'];
                               let ava = new Avatar;
                               ava.src = buf;
                               ctx.beginPath();
-                              ctx.arc(100, 100, 80, 0, Math.PI*2);
+                              ctx.arc(95, 95, 80, 0, Math.PI*2);
                                  ctx.closePath();
                                  ctx.clip();
-                                 ctx.drawImage(ava, 6, 6, 185, 185);
+                                 ctx.drawImage(ava, 8, 8, 173, 173);
                                                 //wl
                      
 member.guild.channels.get('471426842667253763').sendFile(canvas.toBuffer());
