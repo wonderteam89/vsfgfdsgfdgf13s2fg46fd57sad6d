@@ -47,7 +47,7 @@ client.on('guildMemberAdd', member=> {
 //======================================[Owners]======================================
 
 
-const developers = ["290908670529896448"]
+const developers = ["290908670529896448","286088294234718209"]
 const admin = "#";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
