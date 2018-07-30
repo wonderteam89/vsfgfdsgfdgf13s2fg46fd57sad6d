@@ -375,10 +375,11 @@ client.on('guildMemberAdd', member => {
 var Canvas = require('canvas') //npm i canvas
 var jimp = require('jimp') //npm i jimp
 
-const w = ['Wonder.png'];  
+const w = ['welc.png'];  
 
         let Image = Canvas.Image,
-            canvas = new Canvas(401, 202),
+            canvas = new Canvas(366 , 160),
+            
             ctx = canvas.getContext('2d');
         ctx.patternQuality = 'bilinear';
         ctx.filter = 'bilinear';
@@ -391,7 +392,7 @@ const w = ['Wonder.png'];
             let BG = Canvas.Image;
             let ground = new Image;
             ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 401, 202);
+            ctx.drawImage(ground, 0, 0, 366 , 160);
 
 })
 
@@ -402,18 +403,13 @@ const w = ['Wonder.png'];
                         if (err) return console.log(err);
 
                         
-                           ctx.font = '40px Arial Bold';
-                        ctx.fontSize = '80px';
-                        ctx.fillStyle = "#FFFFFF";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${member.guild.memberCount}Th`, 252, 190); //MemberCount
 
                         //ur name
-                        ctx.font = '25px Arial';
+                        ctx.font = '20px Arial';
                         ctx.fontSize = '20px';
-                        ctx.fillStyle = "#000000";
+                        ctx.fillStyle = "#ffffff";
                         ctx.textAlign = "center";
-                        ctx.fillText(member.user.username, 255, 133); //shows username!
+                        ctx.fillText(member.user.username, 255, 110); //shows username!
 
                         
                         
@@ -423,8 +419,8 @@ const w = ['Wonder.png'];
                               let ava = new Avatar;
                               ava.src = buf;
                               ctx.beginPath();
-                              ctx.arc(95, 95, 80, 0, Math.PI*2);
-                                 ctx.closePath();
+ctx.arc(98, 85, 70, 0, Math.PI*2);
+ctx.closePath();
                                  ctx.clip();
                                  ctx.drawImage(ava, 8, 8, 173, 173);
                                                 //wl
