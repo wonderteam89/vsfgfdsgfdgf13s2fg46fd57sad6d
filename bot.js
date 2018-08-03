@@ -39,6 +39,18 @@ client.on('message', message => {
 });
 
 
+    client.on('message', message => {
+        if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('>bc')){
+if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(' sorry,you have no permission ')
+message.channel.sendMessage('Loading ... |:white_check_mark:')
+message.guild.members.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
+
 //======================================[Client]======================================
 
 
